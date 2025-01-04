@@ -1,79 +1,78 @@
 
 # Django Proxy Server
 
-Этот проект — прокси-сервер, который позволяет перенаправлять запросы на указанный целевой URL. Он поддерживает перенаправление CSS, JS, изображений и других ресурсов, а также отображение ошибок с понятными сообщениями на русском и английском языках.
+This project is a proxy server that allows requests to be redirected to a specified hidden URL. It supports redirecting CSS, JS, images and other resources, and exploiting errors with clear messages in both English and English.
 
-## Функционал
-- Перенаправление запросов на указанный целевой сервер.
-- Подмена ссылок на ресурсы (CSS, JS, изображения) для корректного отображения сайтов.
-- Обработка ошибок с отображением красивой HTML-страницы.
-- Поддержка редиректов на целевом сервере.
+## Functionality
+- Redirect requests to the specified target server.
+- Substitution of links to resources (CSS, JS, images) for the correct display of sites.
+- Error handling with displaying a beautiful HTML page.
+- Support for redirects on the target server in Russian and English.
 
-## Установка и запуск
+## Installation and launch
 
-### Шаг 1: Клонируйте проект
+### Step 1: Clone the project
 ```bash
 git clone https://github.com/ayhandev/django-proxy-server.git
 ```
 
-### Шаг 2: Установите зависимости
-Убедитесь, что у вас установлен Python (рекомендуется версия 3.9+). Затем создайте виртуальное окружение и установите зависимости:
+### Step 2: Install dependencies
+Make sure you have Python installed (version 3.9+ recommended). Then create a virtual environment and install dependencies:
 ```bash
 python -m venv venv
-source venv/bin/activate  # Для Windows: venv\Scripts\activate
+source venv/bin/activate # For Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Шаг 3: Запустите сервер разработки
-Выполните следующие команды:
+### Step 3: Start the development server
+Run the following commands:
 ```bash
 python manage.py migrate
 python manage.py runserver
 ```
 
-Сервер будет доступен по адресу: `http://127.0.0.1:8000`.
+The server will be available at: `http://127.0.0.1:8000`.
 
-### Шаг 5: Использование
-Чтобы воспользоваться прокси, отправьте GET-запрос на следующий URL:
+### Step 5: Use
+To use a proxy, send a GET request to the following URL:
 ```
-http://127.0.0.1:8000/proxy/<целевой URL>
+http://127.0.0.1:8000/proxy/<target URL>
 ```
 
-Пример:
+Example:
 ```
 http://127.0.0.1:8000/proxy/www.example.com
 ```
 
 ---
 
-## Как работает
-1. **Основной маршрут:** `/proxy/<target_url>`:
-   - Принимает URL-адрес, к которому будет отправлен запрос.
-   - Подменяет пути к ресурсам (CSS, JS, изображения), чтобы сайт выглядел корректно.
+## How it works
+1. **Main route:** `/proxy/<target_url>`:
+   - Accepts the URL to which the request will be sent.
+   - Replaces paths to resources (CSS, JS, images) so that the site looks correct.
 
-2. **Обработка ошибок**:
-   - В случае ошибки отображается HTML-страница с сообщением на русском и английском языках.
-
----
-
-## Файлы проекта
-- `proxy_app/views.py` — Основная логика прокси-сервера.
-- `proxy_app/urls.py` — Конфигурация маршрутов.
+2. **Error handling**:
+   - If an error occurs, an HTML page is displayed with a message in English.
 
 ---
 
-## Пример использования
-После запуска проекта откройте в браузере:
+## Project files
+- `proxy_app/views.py` — Basic logic of the proxy server.
+- `proxy_app/urls.py` — Route configuration.
+
+---
+
+## Usage example
+After starting the project, open in your browser:
 ```
 http://127.0.0.1:8000/proxy/www.google.com
 ```
 
 ---
 
-## Замечания
-- Убедитесь, что целевой сервер поддерживает доступ из вашего региона.
-- При возникновении ошибок, таких как `Connection refused`, проверьте доступность целевого сервера.
-- Но вы так же можете его использовать в серверах которые находятся в других регионах. :)
-
+## Notes
+- Make sure the target server supports access from your region.
+- If errors such as `Connection refused` occur, check the availability of the target server.
+- But you can also use it in servers located in other regions. :)
 
 
