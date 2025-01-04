@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Server - Инструкция</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content h2 {
+            color: #0073e6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .note {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ff9800;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Django Server - Инструкция</h1>
+</header>
+
+<div class="content">
+    <h2>Добро пожаловать!</h2>
+    <p>Этот прокси-сервер позволяет проксировать запросы на другие сайты, исправляя пути к ресурсам (CSS, JS, изображения) на лету.</p>
+
+    <h2>Как использовать</h2>
+    <p>Чтобы использовать прокси-сервер, сделайте запрос по следующему URL:</p>
+    <div class="code">
+        http://your-domain/proxy/{target_url}
+    </div>
+    <p>Замените <code>{target_url}</code> на адрес сайта, к которому хотите получить доступ через прокси. Например, чтобы получить доступ к сайту <code>https://www.kwork.ru</code>, сделайте запрос:</p>
+    <div class="code">
+        http://your-domain/proxy/www.kwork.ru/
+    </div>
+
+    <h2>Как это работает?</h2>
+    <p>Когда вы делаете запрос через прокси, сервер подменяет ссылки на CSS, JS и изображения на абсолютные пути, соответствующие целевому сайту. Это позволяет вам видеть сайт в точности, как если бы вы открывали его напрямую, но через прокси-сервер.</p>
+
+    <div class="note">
+        <strong>Примечание:</strong> Убедитесь, что целевой сайт не имеет ограничений для проксированных запросов.
+    </div>
+
+    <h2>Где можно использовать?</h2>
+    <p>Этот прокси-сервер особенно полезен для сайтов с защищенными ресурсами или в случае, если вы хотите обойти блокировки.</p>
+
+</div>
+
+</body>
+</html>
