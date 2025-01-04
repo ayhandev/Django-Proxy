@@ -13,7 +13,7 @@ This project is a proxy server that allows requests to be redirected to a specif
 
 ### Step 1: Clone the project
 ```bash
-git clone https://github.com/ayhandev/django-proxy-server.git
+https://github.com/ayhandev/Django-Proxy.git
 ```
 
 ### Step 2: Install dependencies
