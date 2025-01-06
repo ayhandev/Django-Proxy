@@ -57,8 +57,8 @@ http://127.0.0.1:8000/proxy/www.example.com
 ---
 
 ## Project files
-- `proxy_app/views.py` — Basic logic of the proxy server.
-- `proxy_app/urls.py` — Route configuration.
+- `home/views.py` — Basic logic of the proxy server.
+- `home/urls.py` — Route configuration.
 
 ---
 
